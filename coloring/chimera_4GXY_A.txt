@@ -1,0 +1,17 @@
+open 4GXY
+# define colors for each layer
+colordef NonBP white
+colordef layer0 gray
+colordef layer1 red
+colordef layer2 blue
+colordef layer3 orange
+colordef layer4 green
+colordef layer5 purple
+colordef layer6 magenta
+colordef layer7 yellow
+colordef layer8 cyan
+colordef layer9 brown
+# color by PK id
+color NonBP
+color layer0 :2.A :171.A :3.A :170.A :4.A :169.A :5.A :168.A :7.A :166.A :8.A :165.A :9.A :164.A :10.A :163.A :12.A :33.A :13.A :32.A :14.A :31.A :17.A :28.A :18.A :27.A :39.A :162.A :40.A :161.A :45.A :61.A :46.A :60.A :47.A :59.A :48.A :58.A :49.A :57.A :64.A :72.A :65.A :71.A :74.A :155.A :75.A :154.A :76.A :153.A :80.A :148.A :81.A :147.A :82.A :146.A :86.A :139.A :87.A :138.A :88.A :137.A :89.A :136.A :92.A :133.A :94.A :131.A :95.A :130.A :103.A :128.A :104.A :127.A :105.A :126.A :107.A :122.A :108.A :121.A :109.A :120.A :110.A :119.A :111.A :118.A :112.A :117.A 
+color layer1 :62.A :152.A :63.A :151.A 

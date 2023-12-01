@@ -1,0 +1,14 @@
+open 1EBQ
+# define colors for each layer
+colordef NonBP white
+colordef layer0 gray
+colordef layer1 red
+colordef layer2 blue
+colordef layer3 orange
+colordef layer4 green
+colordef layer5 purple
+colordef layer6 magenta
+colordef layer7 yellow
+colordef layer8 cyan
+colordef layer9 brown
+# color by PK id

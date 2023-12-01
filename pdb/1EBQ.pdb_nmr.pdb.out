@@ -1,0 +1,24 @@
+PDB data file name: 1EBQ.pdb_nmr.pdb
+BEGIN_base-pair
+     1_29, A:     1 G-C    29 A: +/+ cis         XIX
+     2_28, A:     2 G-C    28 A: +/+ cis         XIX
+     3_27, A:     3 U-A    27 A: -/- cis         XX
+     4_26, A:     4 G-C    26 A: +/+ cis         XIX
+     5_25, A:     5 G-A    25 A: W/W cis         VIII
+     6_23, A:     6 G-G    23 A: W/W tran        III
+     7_22, A:     7 C-G    22 A: +/+ cis         XIX
+     8_21, A:     8 G-C    21 A: +/+ cis         XIX
+     9_20, A:     9 C-G    20 A: +/+ cis         XIX
+    10_19, A:    10 A-U    19 A: -/- cis         XX
+    11_18, A:    11 G-C    18 A: +/+ cis         XIX
+    12_17, A:    12 C-G    17 A: +/+ cis         XIX
+    13_16, A:    13 U-G    16 A: S/W tran     syn  n/a
+    24_25, A:    24 U-A    25 A: S/? cis         !(s_s)
+END_base-pair
+  The total base pairs =  13 (from   29 bases)
+------------------------------------------------
+ Standard  WW--cis  WW-tran  HH--cis  HH-tran  SS--cis  SS-tran
+       10        1        1        0        0        0        0
+  WH--cis  WH-tran  WS--cis  WS-tran  HS--cis  HS-tran
+        0        0        0        1        0        0
+------------------------------------------------

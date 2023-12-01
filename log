@@ -1,0 +1,1 @@
+cat pdb/1KPD.pdb.out  | grep A: |  cat pdb/1KPD.pdb.out  | grep A: | sed -e "s/ \+/\t/g" | awk -F "\t" '(($7="W/W") && ($8="cis")) || ($9='XIX') || ($9="XXVIII") {print $0}'D

@@ -1,0 +1,17 @@
+open 1KXK
+# define colors for each layer
+colordef NonBP white
+colordef layer0 gray
+colordef layer1 red
+colordef layer2 blue
+colordef layer3 orange
+colordef layer4 green
+colordef layer5 purple
+colordef layer6 magenta
+colordef layer7 yellow
+colordef layer8 cyan
+colordef layer9 brown
+# color by PK id
+color NonBP
+color layer0 :6.A :64.A :7.A :63.A :8.A :62.A :11.A :61.A :12.A :60.A :13.A :59.A :14.A :58.A :15.A :57.A :19.A :54.A :20.A :53.A :21.A :52.A :22.A :51.A :23.A :50.A :24.A :49.A :25.A :48.A :26.A :47.A :27.A :46.A :28.A :45.A :29.A :42.A :30.A :41.A :31.A :40.A :32.A :39.A :33.A :38.A 
+bondcolor layer0 :6.A :64.A :7.A :63.A :8.A :62.A :11.A :61.A :12.A :60.A :13.A :59.A :14.A :58.A :15.A :57.A :19.A :54.A :20.A :53.A :21.A :52.A :22.A :51.A :23.A :50.A :24.A :49.A :25.A :48.A :26.A :47.A :27.A :46.A :28.A :45.A :29.A :42.A :30.A :41.A :31.A :40.A :32.A :39.A :33.A :38.A 
