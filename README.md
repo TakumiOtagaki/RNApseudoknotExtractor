@@ -25,6 +25,21 @@ For now, rnaview does not work in MacOS, it follows that you cannot use rPKExtra
 
 
 After rnaview and rna-tools installed,
+```sh
+git clone https://github.com/TakumiOtagaki/RNApseudoknotExtractor.git
+cd RNApseudoknotExtractor
+pip install -r requirements.txt
 ```
-git clone 
+
+## usage
+Simple.
+
 ```
+cd RNApseudoknotExtractor
+# ./pkextractor.sh PDB_ID chimera_or_pyMOL
+# ./pkextractor.sh 1KPD chimera
+```
+Then you can see that `RNApseudoknotExtractor/coloring/${viewer}_${PDB_ID}.txt` is generated.
+This text file has the coloring script of the viewer you selected (chimera or pyMOL).
+
+
