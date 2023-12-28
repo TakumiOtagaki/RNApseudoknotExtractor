@@ -33,32 +33,28 @@ Reference:
 Yang et al (2003) Nucleic Acids Research, Vol31,No13,p3450-3461.
 -----------------------------------------------------------
 BEGIN_base-pair
-     1_50, X:     1 G-C    25 Y: +/+ cis         XIX
-     2_49, X:     2 G-C    24 Y: +/+ cis         XIX
      4_48, X:     4 A-U    23 Y: -/- cis         XX
      5_47, X:     5 A-U    22 Y: -/- cis         XX
-     5_48, X:     5 A-U    23 Y:      stacked
-     6_46, X:     6 G-C    21 Y: +/+ cis         XIX
      7_45, X:     7 A-U    20 Y: -/- cis         XX
-     8_44, X:     8 G-C    19 Y: +/+ cis         XIX
-     9_43, X:     9 C-G    18 Y: +/+ cis         XIX
     10_42, X:    10 A-U    17 Y: -/- cis         XX
-    12_40, X:    12 C-A    15 Y: W/W cis         n/a
+     9_43, X:     9 C-G    18 Y: +/+ cis         XIX
     13_39, X:    13 C-G    14 Y: +/+ cis         XIX
-    14_38, X:    14 G-C    13 Y: +/+ cis         XIX
-    15_37, X:    15 A-C    12 Y: W/W cis         n/a
-    17_35, X:    17 U-A    10 Y: -/- cis         XX
-    18_34, X:    18 G-C     9 Y: +/+ cis         XIX
     19_33, X:    19 C-G     8 Y: +/+ cis         XIX
-    20_32, X:    20 U-A     7 Y: -/- cis         XX
     21_31, X:    21 C-G     6 Y: +/+ cis         XIX
-    22_30, X:    22 U-A     5 Y: -/- cis         XX
-    23_29, X:    23 U-A     4 Y: -/- cis         XX
     24_27, X:    24 C-G     2 Y: +/+ cis         XIX
     25_26, X:    25 C-G     1 Y: +/+ cis         XIX
-    37_38, Y:    12 C-C    13 Y:      stacked
-    44_45, Y:    19 C-U    20 Y:      stacked
-    47_48, Y:    22 U-U    23 Y:      stacked
+     1_50, X:     1 G-C    25 Y: +/+ cis         XIX
+     2_49, X:     2 G-C    24 Y: +/+ cis         XIX
+     6_46, X:     6 G-C    21 Y: +/+ cis         XIX
+     8_44, X:     8 G-C    19 Y: +/+ cis         XIX
+    14_38, X:    14 G-C    13 Y: +/+ cis         XIX
+    18_34, X:    18 G-C     9 Y: +/+ cis         XIX
+    17_35, X:    17 U-A    10 Y: -/- cis         XX
+    20_32, X:    20 U-A     7 Y: -/- cis         XX
+    22_30, X:    22 U-A     5 Y: -/- cis         XX
+    23_29, X:    23 U-A     4 Y: -/- cis         XX
+    15_37, X:    15 A-C    12 Y: W/W cis         n/a
+    12_40, X:    12 C-A    15 Y: W/W cis         n/a
 END_base-pair
   The total base pairs =  22 (from   50 bases)
 ------------------------------------------------
