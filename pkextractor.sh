@@ -2,12 +2,16 @@
 # export PDB_ID="1KPD"
 # to call this script:
     # ./pkextractor.sh --pdb_id 1KPD(=PDB_ID) --chimera_or_pyMOL(=viewer) chimera
+    # ./pkextractor.sh 1KPD(=PDB_ID) chimera
 export PDB_ID=$1
 
 # activate python venv
-source /home/otgk/PKExtractor/venv/bin/activate
+# source /home/otgk/PKExtractor/venv/bin/activate
+. ~/.bashrc
+source /large/share/app/conda/miniconda3/etc/profile.d/conda.sh 
+conda activate pkextractor
 
-
+export pjt_dir="/large/otgk/rPKExtractor"
 
 # argparser
 if [ $# -ne 2 ]; then
@@ -25,6 +29,7 @@ else
     exit 1
 fi
 
+# chimera/pyMOL format. colordef/set_color should be used.
 if [ $viewer == "chimera" ]; then
     export def="colordef"
 elif [ $viewer == "pyMOL" ]; then
@@ -36,13 +41,12 @@ fi
 echo "PDB_ID:$PDB_ID"
 
 # at pdb directory
-cd /home/otgk/PKExtractor/PKExtractor/pdb
+cd $pjt_dir/pdb
 echo "fetching ${PDB_ID}.pdb"
 rna_pdb_tools.py --fetch $PDB_ID
-
 echo "${PDB_ID}.pdb downloaded"
 
-cd ..
+cd $pjt_dir
 echo "get sequence from ${PDB_ID}.pdb"
 rna_pdb_tools.py --get-seq pdb/$PDB_ID.pdb > seq/${PDB_ID}.fasta
 echo "sequence extraction done"
@@ -91,11 +95,11 @@ do
 
     echo "# define colors for each layer" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
     echo "$def NonBP white" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
-    echo "$def layer0 gray" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
+    echo "$def layer0 green" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
     echo "$def layer1 red" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
     echo "$def layer2 blue" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
     echo "$def layer3 orange" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
-    echo "$def layer4 green" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
+    echo "$def layer4 pink" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
     echo "$def layer5 purple" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
     echo "$def layer6 magenta" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
     echo "$def layer7 yellow" >> coloring/${viewer}_${PDB_ID}_${chain}.txt
@@ -147,14 +151,18 @@ echo "concat all $viewer script"
 if [ $viewer == "chimera" ]; then
     echo "open ${PDB_ID}" > coloring/${viewer}_${PDB_ID}.txt
     cat coloring/${viewer}_${PDB_ID}_A.txt | grep $def >> coloring/${viewer}_${PDB_ID}.txt
-    cat coloring/${viewer}_${PDB_ID}_*.txt | grep -v "open ${PDB_ID}" | grep -v "color NonBP" | grep -v $def >> coloring/${viewer}_${PDB_ID}.txt
+    echo "color NonBP" >> coloring/${viewer}_${PDB_ID}.txt
+    cat coloring/${viewer}_${PDB_ID}_*.txt | grep -v "open ${PDB_ID}" | grep -v "color NonBP" | grep -v $def | grep -v "#" >> coloring/${viewer}_${PDB_ID}.txt
 elif [ $viewer == "pyMOL" ]; then
     echo "fetch ${PDB_ID}" > coloring/${viewer}_${PDB_ID}.txt
     cat coloring/${viewer}_${PDB_ID}_A.txt | grep $def >> coloring/${viewer}_${PDB_ID}.txt
-    cat coloring/${viewer}_${PDB_ID}_*.txt | grep -v "open ${PDB_ID}" | grep -v "color NonBP" | grep -v $def >> coloring/${viewer}_${PDB_ID}.txt
-    cat coloring/${viewer}_${PDB_ID}_*.txt | grep -v "fetch ${PDB_ID}" | grep -v "color NonBP" >> coloring/${viewer}_${PDB_ID}.txt
+    cat coloring/${viewer}_${PDB_ID}_*.txt | grep -v "open ${PDB_ID}" | grep -v "color NonBP" | grep -v $def | grep -v "#" >> coloring/${viewer}_${PDB_ID}.txt
+    echo "color NonBP" >> coloring/${viewer}_${PDB_ID}.txt
+    cat coloring/${viewer}_${PDB_ID}_*.txt | grep -v "fetch ${PDB_ID}" | grep -v "color NonBP" | grep -v "#"  >> coloring/${viewer}_${PDB_ID}.txt
 fi
+
 
 echo "all operation done!"
 echo "show ./coloring/${viewer}_${PDB_ID}.txt"
-deactivate
+
+conda deactivate
