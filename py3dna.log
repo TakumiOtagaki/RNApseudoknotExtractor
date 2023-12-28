@@ -1,0 +1,3 @@
+/large/yoshihiko_s/app/3d-dna/180922/3d-dna -i=/large/otgk/rPKExtractor/pdb/1KPD.pdb
+/large/yoshihiko_s/app/3d-dna/180922/run-asm-pipeline.sh -i=/large/otgk/rPKExtractor/pdb/1KPD.pdb
+version: 180922
