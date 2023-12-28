@@ -1,11 +1,11 @@
 open 6T3R
 # define colors for each layer
 colordef NonBP white
-colordef layer0 gray
+colordef layer0 green
 colordef layer1 red
 colordef layer2 blue
 colordef layer3 orange
-colordef layer4 green
+colordef layer4 pink
 colordef layer5 purple
 colordef layer6 magenta
 colordef layer7 yellow
